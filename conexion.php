@@ -1,16 +1,12 @@
 <?php
- 
-    $host = "localhost";
-    $usuario = "root";
-    $contraseña = "";
-    $basedatos = "forodb";
+$host = "localhost";
+$db = "forodb";
+$user = "root";
+$pass = "";
 
-    $conexion = new mysqli($host, $usuario, $contraseña, $basedatos);
+$conn = new mysqli($host, $user, $pass, $db);
 
-    if ($conexion->connect_error){
-        die("Conexion fallida: " . $conexion->connect_error); 
-    }
-    else
-        echo "Conexion exitosa";
-
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
 ?>
